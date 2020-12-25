@@ -1,0 +1,99 @@
+body{
+    background-color: rgb(117, 122, 129);
+    margin: 20px;
+}
+
+h1{
+    font-family: 'Anton';
+    text-shadow: 8px 0 #232931;
+    font-size: 6rem;
+    color: rgb(207, 0, 52);
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Anton';
+    /* text-shadow: 8px 0 #232931; */
+    font-size: 4rem;
+    color: rgb(248, 124, 74);
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+/* .column {
+    float: left;
+    width: 50%;
+    background-color: aliceblue;
+    border-radius: 40px;
+    margin: 12px;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+/* .container{
+    width: 100%;
+    text-align: center;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255)
+} */
+
+.left-box{
+    float: left;
+    width: 45%;
+    border-radius: 40px;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+}
+
+.right-box{
+    float: right;
+    width: 45%;
+    border-radius: 40px;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    
+}
+
+.content{
+    font-family: 'Abel';
+    font-size: 1.5rem;
+}
+
+.input{
+    font-family: 'Abel';
+    font-size: 1rem;
+}
+
+#todo{
+    width: 70%;
+}
+
+.mini-th{
+    width: 10%;
+}
+
+.th{
+    width: 25%;
+}
+
+.red{
+    background-color: rgb(224, 62, 62);;
+}
+
+.green{
+    background-color: rgb(100, 224, 62);;
+}
+
+
+
+
+
+
+
