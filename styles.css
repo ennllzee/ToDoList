@@ -6,7 +6,7 @@ body{
 h1{
     font-family: 'Anton';
     text-shadow: 8px 0 #232931;
-    font-size: 400%;
+    font-size: 500%;
     color: rgb(207, 0, 52);
     width: 70%;
     margin: auto;
@@ -16,7 +16,7 @@ h1{
 h3{
     font-family: 'Anton';
     /* text-shadow: 8px 0 #232931; */
-    font-size: 200%;
+    font-size: 300%;
     color: rgb(248, 124, 74);
     width: 70%;
     margin: auto;
@@ -42,7 +42,7 @@ h3{
 
 .content{
     font-family: 'Abel';
-    font-size: 100%;
+    font-size: 150%;
 }
 
 .input{
