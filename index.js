@@ -4,6 +4,8 @@ document.querySelector('#form').addEventListener('submit', function(e) {
         alert("Please Enter Title")
     }else if(document.getElementById("date").value === ""){
         alert("Please Enter Due Date")
+    }else if(find(document.getElementById("todo").value)){
+        alert("Have already this Title in LIST")
     }else{
         var n = document.getElementById("todo").value
         const list = {
@@ -15,6 +17,15 @@ document.querySelector('#form').addEventListener('submit', function(e) {
     }
 
 })
+
+function find(title) {
+    for(i = 0; i < localStorage.length; i++){
+        if(localStorage.key(i) == title){
+            return true;
+        }
+    }
+    return false;
+}
 
 for(i = 0; i < localStorage.length; i++){
     var key = localStorage.key(i)
@@ -30,9 +41,11 @@ for(i = 0; i < localStorage.length; i++){
     zero.innerHTML = "X" 
     zero.id = key
     zero.addEventListener("click", function(){
-        localStorage.removeItem(this.id)
-        alert(this.id + " is DELETE!")
-        location.reload()
+        if (confirm("Are you sure to delete this?")) {
+            localStorage.removeItem(this.id)
+            alert(this.id + " is DELETE!")
+            location.reload()
+        }
     });
     zeroCell.appendChild(zero);
 
@@ -46,10 +59,11 @@ for(i = 0; i < localStorage.length; i++){
         button.className = "red"
         button.id = key
         button.addEventListener("click", function(){  
-            value.status = "done"
-            localStorage.setItem(key,JSON.stringify(value))
-            alert(this.id + " is DONE!")
-            location.reload()
+            if (confirm("Are you sure this done?")) {
+                value.status = "done"
+                localStorage.setItem(key,JSON.stringify(value))
+                location.reload()
+            }
         });
     }else{
         button.innerHTML = "DONE"

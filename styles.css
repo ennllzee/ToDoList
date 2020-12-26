@@ -23,27 +23,6 @@ h3{
     text-align: center;
 }
 
-/* .column {
-    float: left;
-    width: 50%;
-    background-color: aliceblue;
-    border-radius: 40px;
-    margin: 12px;
-}
-  
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-} */
-
-/* .container{
-    width: 100%;
-    text-align: center;
-    border-radius: 25px;
-    background-color: rgb(255, 255, 255)
-} */
-
 .left-box{
     float: left;
     width: 45%;
@@ -84,12 +63,30 @@ h3{
 }
 
 .red{
-    background-color: rgb(224, 62, 62);;
+    font-family: 'Abel';
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(224, 62, 62);
+    border: none;
+}
+
+.red:hover{
+    font-family: 'Abel';
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 66, 66);
+    border: none;
 }
 
 .green{
-    background-color: rgb(100, 224, 62);;
+    font-family: 'Abel';
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(100, 224, 62);
+    border: none;
 }
+
+
 
 
 
