@@ -60,8 +60,9 @@ for(i = 0; i < localStorage.length; i++){
         button.id = key
         button.addEventListener("click", function(){  
             if (confirm("Are you sure this done?")) {
-                value.status = "done"
-                localStorage.setItem(this.id,JSON.stringify(value))
+                var c = JSON.parse(localStorage.getItem(this.id))
+                c.status = "done"
+                localStorage.setItem(this.id,JSON.stringify(c))
               //alert(this.id + " is done.")
               location.reload()
             }
