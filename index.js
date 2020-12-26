@@ -54,8 +54,22 @@ for(i = 0; i < localStorage.length; i++){
     secondCell.textContent =  value.DD
 
     var button = document.createElement("BUTTON")
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+
+    today = yyyy + '-' + mm + '-' + dd;
+
     if (value.status == "not done"){
-        button.innerHTML = "NOT DONE"   
+
+        if(today>value.DD){
+            button.innerHTML = "LATE" 
+        }else{
+            button.innerHTML = "NOT DONE"  
+        }
+
         button.className = "red"
         button.id = key
         button.addEventListener("click", function(){  
@@ -63,14 +77,13 @@ for(i = 0; i < localStorage.length; i++){
                 var c = JSON.parse(localStorage.getItem(this.id))
                 c.status = "done"
                 localStorage.setItem(this.id,JSON.stringify(c))
-              //alert(this.id + " is done.")
-              location.reload()
+                location.reload()
             }
         });
+
     }else{
         button.innerHTML = "DONE"
         button.className = "green"
     }       
     thirdCell.appendChild(button);
 }
-
