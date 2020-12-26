@@ -59,11 +59,11 @@ for(i = 0; i < localStorage.length; i++){
         button.className = "red"
         button.id = key
         button.addEventListener("click", function(){  
-            if (confirm("Are you sure this done?")) {
+            //if (confirm("Are you sure this done?")) {
                 value.status = "done"
                 localStorage.setItem(key,JSON.stringify(value))
                 location.reload()
-            }
+            //}
         });
     }else{
         button.innerHTML = "DONE"
